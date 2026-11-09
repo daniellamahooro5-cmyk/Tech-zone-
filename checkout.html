@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - TechZone Computers</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>TechZone Computers</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="cart.html">Cart</a>
+    </nav>
+</header>
+
+<section class="checkout-section">
+    <h2>Customer Checkout</h2>
+
+    <form id="checkoutForm">
+        <label>Full Name:</label>
+        <input type="text" id="customerName" required minlength="3">
+
+        <label>Phone Number:</label>
+        <input type="tel" id="customerPhone"
+               required pattern="[0-9]{10}"
+               placeholder="10 digit phone number">
+
+        <label>Delivery Address:</label>
+        <textarea id="customerAddress" required minlength="5"></textarea>
+
+        <label>Payment Method:</label>
+        <select id="paymentMethod" required>
+            <option value="">Select Payment Method</option>
+            <option value="Mobile Money">Mobile Money</option>
+            <option value="Cash on Delivery">Cash on Delivery</option>
+        </select>
+
+        <button type="submit">Place Order</button>
+    </form>
+
+    <p id="orderMessage"></p>
+</section>
+
+<footer>
+    <p>&copy; 2026 TechZone Computers. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
